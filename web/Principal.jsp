@@ -20,16 +20,17 @@
                     <li class="nav-item active">
                         <a style="margin-left: 10px; border: none" class="nav-link" aria-current="page" href="Controlador?menu=Inventario&accion=Listar" target="myFrame">Inventario</a>
                     </li>
-                    <% } %>
-                    <% if ("Almacenista".equals(rol)) { %>
-                    <li class="nav-item">
-                        <a style="margin-left: 10px; border: none" class="nav-link" href="Controlador?menu=Salida&accion=ListarSalida" target="myFrame">Salida de productos</a>
-                    </li>
-                    <% } %>
-                    
                     <li class="nav-item">
                         <a style="margin-left: 10px; border: none"  class="nav-link" href="Controlador?menu=Historial&accion=ListarH" target="myFrame">Historial</a>
                     </li>
+                    <% } %>
+                    <% if ("Almacenista".equals(rol)) { %>
+                    <li class="nav-item">
+                        <a style="margin-left: 10px; border: none" class="nav-link" href="Controlador?menu=Salida&accion=ListarSalida" target="myFrame">Inventario </a>
+                    </li>
+                    <% } %>
+                    
+                    
                     <li class="nav-item">
                         <form action="Validar" method="POST">
                             <button type="submit" name="accion" value="Salir" class="nav-link" href="#"><%= nombreUsuario %> <%= rol %> Salir</button>
